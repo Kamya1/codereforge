@@ -106,7 +106,7 @@ export function CodeFlowDiagram({ code, language, currentLine }: CodeFlowDiagram
         </CardHeader>
         <CardContent>
           <p className="text-muted-foreground">
-            Could not generate control flow diagram. The code might be too simple or contain syntax that couldn&apos;t be parsed.
+            Could not generate control flow diagram. The code might be too simple or contain syntax that couldn&#39;t be parsed.
           </p>
           <p className="text-xs text-muted-foreground mt-2">
             Debug: {nodes.length} nodes, {edges.length} edges generated.

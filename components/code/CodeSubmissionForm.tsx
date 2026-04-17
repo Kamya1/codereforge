@@ -195,7 +195,7 @@ export function CodeSubmissionForm() {
               <textarea
                 value={tc.input}
                 onChange={(e) => updateTestCase(index, 'input', e.target.value)}
-                placeholder="Test input (one line per input value, e.g., &apos;5\n10&apos; for two integers)"
+                placeholder={"Test input (one line per input value, e.g., '5\\n10' for two integers)"}
                 className="w-full p-2 border border-input rounded-md font-mono text-sm"
               />
 

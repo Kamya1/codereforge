@@ -52,7 +52,6 @@ export function CodeFlowDiagram({ code, language, currentLine }: CodeFlowDiagram
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   
-  // Update nodes/edges when code changes
   useEffect(() => {
     setNodes(initialNodes);
     setEdges(initialEdges);
@@ -63,7 +62,6 @@ export function CodeFlowDiagram({ code, language, currentLine }: CodeFlowDiagram
     [setEdges]
   );
   
-  // Highlight current executing node
   const nodesWithHighlight = useMemo(() => {
     return nodes.map(node => {
       const isCurrent = currentLine && node.data.lineNumber === currentLine;
@@ -108,7 +106,7 @@ export function CodeFlowDiagram({ code, language, currentLine }: CodeFlowDiagram
         </CardHeader>
         <CardContent>
           <p className="text-muted-foreground">
-            Could not generate control flow diagram. The code might be too simple or contain syntax that couldn't be parsed.
+            Could not generate control flow diagram. The code might be too simple or contain syntax that couldn&apos;t be parsed.
           </p>
           <p className="text-xs text-muted-foreground mt-2">
             Debug: {nodes.length} nodes, {edges.length} edges generated.
@@ -169,4 +167,3 @@ export function CodeFlowDiagram({ code, language, currentLine }: CodeFlowDiagram
     </Card>
   );
 }
-
